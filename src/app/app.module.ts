@@ -7,12 +7,16 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { UserComponent } from './components/user/user.component';
 import { MapComponent } from './components/map/map.component';
+import { HomeComponent } from './home/home.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
-    MapComponent
+    MapComponent,
+    HomeComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
