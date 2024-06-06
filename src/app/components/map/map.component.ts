@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AttractionService } from 'src/app/services/attraction.service';
 
 @Component({
@@ -6,14 +6,24 @@ import { AttractionService } from 'src/app/services/attraction.service';
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.css']
 })
-export class MapComponent {
+export class MapComponent implements OnInit {
   user = { latitude: 0, longitude: 0, age: 0, height: 0 };
   attrazioni: any[] = [];
 
   constructor(private attractionService: AttractionService) {}
 
   ngOnInit() {
+    this.loadUserFromSession();
     this.getUserLocation();
+  }
+
+  loadUserFromSession() {
+    const userStr = sessionStorage.getItem('user');
+    if (userStr) {
+      this.user = JSON.parse(userStr);
+    } else {
+      console.error("Dati dell'utente non trovati.");
+    }
   }
 
   getUserLocation() {
@@ -23,7 +33,7 @@ export class MapComponent {
         this.user.longitude = position.coords.longitude;
       });
     } else {
-      console.error("Geolocation is not supported by this browser.");
+      console.error("La Geolocalizzazione non e supportata in questo browser.");
     }
   }
 

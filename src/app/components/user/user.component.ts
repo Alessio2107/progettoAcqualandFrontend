@@ -12,8 +12,10 @@ export class UserComponent {
   constructor(private userService: UserService) {}
 
   saveUser() {
+    console.log(this.user);
     this.userService.saveUser(this.user).subscribe(response => {
       console.log('User saved:', response);
+      sessionStorage.setItem('user', JSON.stringify(this.user));
     });
   }
 }
