@@ -1,10 +1,22 @@
-.user-form-container {
-  max-width: 600px;
-  margin: 0 auto;
+.user-container {
+  background-image: url('https://www.dieresin.com/wp-content/uploads/2021/10/Progettazione-Scivoli-per-Parchi-Acquatici-Dieresin.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Posiziona il form più in alto */
+  padding-top: 50px; /* Aggiungi un padding superiore per regolare la posizione verticale */
+}
+
+.user-form {
+  background-color: rgba(255, 255, 255, 0.9); /* Più bianco */
   padding: 2rem;
-  background-color: #f9f9f9;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  width: 60%; /* Più largo */
+  max-width: 800px;
 }
 
 .user-form h2 {

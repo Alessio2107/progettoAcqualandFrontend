@@ -1,24 +1,61 @@
 .map-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
-  background-color: #f1f1f1;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  background-image: url('https://www.aqualandvasto.com/app/uploads/2022/06/mappa-AQ-ombrelloni.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 50px;
 }
 
-.map-container h2 {
+.map-form {
+  background-color: rgba(255, 255, 255, 0.9); 
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  width: 60%; 
+  max-width: 800px;
+}
+
+.map-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
   font-family: 'Arial', sans-serif;
   color: #333;
-  margin-bottom: 1.5rem;
+}
+
+.map-form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.map-form .form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #555;
+}
+
+.map-form .form-group input {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.map-form .form-group input:focus {
+  border-color: #007bff;
+  outline: none;
 }
 
 .find-button {
-  padding: 0.75rem 1.5rem;
+  width: 100%;
+  padding: 0.75rem;
   border: none;
   border-radius: 5px;
-  background-color: #28a745;
+  background-color: #007bff;
   color: #fff;
   font-size: 1.25rem;
   cursor: pointer;
@@ -26,31 +63,5 @@
 }
 
 .find-button:hover {
-  background-color: #218838;
-}
-
-.attraction-list {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.attraction-item {
-  padding: 1.5rem;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: left;
-}
-
-.attraction-item h3 {
-  margin-top: 0;
-  color: #007bff;
-}
-
-.attraction-item p {
-  margin: 0.5rem 0 0;
-  color: #555;
+  background-color: #0056b3;
 }

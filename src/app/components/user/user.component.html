@@ -1,26 +1,28 @@
-<div class="user-form-container">
-  <h2>User Information</h2>
-  <form (ngSubmit)="saveUser()" class="user-form">
-    <div class="form-group">
-      <label for="name">Name:</label>
-      <input id="name" [(ngModel)]="user.name" name="name" required>
-    </div>
-    <div class="form-group">
-      <label for="age">Age:</label>
-      <input id="age" [(ngModel)]="user.age" name="age" type="number" required>
-    </div>
-    <div class="form-group">
-      <label for="height">Height:</label>
-      <input id="height" [(ngModel)]="user.height" name="height" type="number" required>
-    </div>
-    <div class="form-group">
-      <label for="latitude">Latitude:</label>
-      <input id="latitude" [(ngModel)]="user.latitude" name="latitude" type="number" required>
-    </div>
-    <div class="form-group">
-      <label for="longitude">Longitude:</label>
-      <input id="longitude" [(ngModel)]="user.longitude" name="longitude" type="number" required>
-    </div>
-    <button type="submit" class="save-button">Save</button>
-  </form>
+<div class="user-container">
+  <div class="user-form">
+    <h2>User Information</h2>
+    <form (ngSubmit)="saveUser()">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input id="name" [(ngModel)]="user.name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input id="age" [(ngModel)]="user.age" name="age" type="number" required>
+      </div>
+      <div class="form-group">
+        <label for="height">Height:</label>
+        <input id="height" [(ngModel)]="user.height" name="height" type="number" required>
+      </div>
+      <div class="form-group">
+        <label for="latitude">Latitude:</label>
+        <input id="latitude" [(ngModel)]="user.latitude" name="latitude" type="number" step="any" required>
+      </div>
+      <div class="form-group">
+        <label for="longitude">Longitude:</label>
+        <input id="longitude" [(ngModel)]="user.longitude" name="longitude" type="number" step="any" required>
+      </div>
+      <button type="submit" class="save-button">Save</button>
+    </form>
+  </div>
 </div>
