@@ -1,0 +1,10 @@
+<div class="map-container">
+  <h2>MAPPA DELLE ATTRAZIONI</h2>
+  <button (click)="findNearbyAttractions()" class="find-button">Trova Attrazioni Vicine</button>
+  <div class="attraction-list">
+    <div *ngFor="let a of attrazioni" class="attraction-item">
+      <h3>{{ a.name }}</h3>
+      <p>{{ a.description }}</p>
+    </div>
+  </div>
+</div>
