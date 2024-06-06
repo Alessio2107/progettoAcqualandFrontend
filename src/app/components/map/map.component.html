@@ -1,17 +1,12 @@
 <div class="map-container">
-  <div class="map-form">
-    <h2>MAPPA DELLE ATTRAZIONI</h2>
-    <button (click)="findNearbyAttractions()" class="find-button">Trova Attrazioni Vicine</button>
-  
-    <div *ngFor="let a of attrazioni" class="form-group">
-      <h3>{{ a.name }}</h3>
-      <p>{{ a.description }}</p>
-    </div>
+  <div id="map" class="map"></div>
+  <div class="map-info">
+    <h2>Attrazioni Vicine</h2>
+    <ul>
+      <li *ngFor="let attraction of attrazioni">
+        <h3>{{ attraction.name }}</h3>
+        <p>{{ attraction.description }}</p>
+      </li>
+    </ul>
   </div>
-</div>
-<div class="map-container"
-leaflet
-[leafletOptions]="options"
-(leafletMapReady)="onMapReady($event)"
-(leafletClick)="mapClicked($event)">
 </div>

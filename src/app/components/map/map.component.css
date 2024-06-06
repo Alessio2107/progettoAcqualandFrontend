@@ -68,3 +68,35 @@
 .map-container {
   height: 400px;
 }
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 60vh; 
+}
+
+.map {
+  width: 100%;
+  height: 100%; 
+}
+
+.map-info {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1rem;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.map-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.map-info li {
+  margin-bottom: 1rem;
+}
