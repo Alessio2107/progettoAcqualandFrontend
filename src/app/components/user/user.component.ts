@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
 import * as Leaflet from 'leaflet';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-user',
@@ -12,14 +13,14 @@ export class UserComponent implements OnInit {
   map!: Leaflet.Map;
   userMarker!: Leaflet.Marker;
 
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService, private route: Router) {}
 
   ngOnInit() {
     this.initMap();
   }
 
   initMap() {
-    this.map = Leaflet.map('user-map').setView([42.35, 13.40], 13);
+    this.map = Leaflet.map('user-map').setView([42.15005,14.69642], 15);
 
     Leaflet.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -42,10 +43,12 @@ export class UserComponent implements OnInit {
   }
 
   saveUser() {
+    sessionStorage.clear();
     console.log(this.user);
     this.userService.saveUser(this.user).subscribe(response => {
       console.log('User saved:', response);
       sessionStorage.setItem('user', JSON.stringify(this.user));
+      this.route.navigate(['/map']);
     });
   }
 }

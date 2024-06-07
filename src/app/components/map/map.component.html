@@ -4,14 +4,14 @@
     <button (click)="findNearbyAttractions()" class="find-button">Trova Attrazioni Vicine</button>
 
     <div *ngFor="let a of attrazioni" class="form-group">
-      <h3>{{ a.name }}</h3>
+      <h3>{{ a.nome }}</h3>
       <p>{{ a.description }}</p>
     </div>
   </div>
 </div>
 <div class="map-container"
-leaflet
-[leafletOptions]="options"
-(leafletMapReady)="onMapReady($event)"
-(leafletClick)="mapClicked($event)">
+     leaflet
+     [leafletOptions]="options"
+     (leafletMapReady)="onMapReady($event)"
+     (leafletClick)="mapClicked($event)">
 </div>

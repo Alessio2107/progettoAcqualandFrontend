@@ -12,6 +12,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { LoginComponent } from './registration/login/login.component';
+import { RegisterComponent } from './registration/register/register.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { LeafletModule } from '@asymmetrik/ngx-leaflet';
     MapComponent,
     HomeComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
